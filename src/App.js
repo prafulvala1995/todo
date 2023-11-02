@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-// import TaskList from './askList';
 import Tasklist from './component/Tasklist';
+import './App.css';
 
 
 function App() {
@@ -64,7 +64,9 @@ function App() {
   });
 
   return (
-    <div>
+    <container>
+    <div align="center" className='padd'>
+    <h2>Task Performing Data</h2>
       <input
         type="text"
         placeholder="Add a new task"
@@ -77,13 +79,14 @@ function App() {
         <option value="completed">Completed</option>
         <option value="uncompleted">Uncompleted</option>
       </select>
-      <Tasklist
+      <Tasklist align="center"
         tasks={filteredTasks}
         onTaskToggle={toggleTask}
         onTaskEdit={editTask}
         onTaskDelete={deleteTask}
       />
     </div>
+    </container>
   );
 }
 

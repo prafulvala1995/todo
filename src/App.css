@@ -1,8 +1,25 @@
-/* styles.css */
-.App {
-  text-align: center;
+
+body {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 600px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
 }
 
 ul {
@@ -13,58 +30,74 @@ ul {
 li {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   margin: 10px 0;
+  padding: 10px;
+  transition: transform 0.2s;
+  width: 600px;
+}
+
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 input[type="text"] {
-  margin-right: 10px;
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
 }
 
 button {
   margin-left: 10px;
-}
-
-h1 {
-  color: #333;
-}
-
-.task {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #ccc;
-  padding: 8px;
-  margin: 8px 0;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-}
-
-.task input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-.task button {
-  background-color: #ff5733;
-  color: white;
-  border: none;
   padding: 5px 10px;
-  border-radius: 4px;
+  border: none;
+  border-radius: 3px;
   cursor: pointer;
-  margin-left: 10px;
+  background-color: #4CAF50;
+  color: #fff;
 }
 
-input[type="text"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+button:hover {
+  background-color: #45a049;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Task Complete/Incomplete Styles */
+input[type="checkbox"] {
   margin-right: 10px;
 }
 
-button.add-button {
-  background-color: #42b883;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
+input[type="checkbox"]:checked + span {
+  /* text-decoration: line-through; */
+  color: #434242;
 }
+
+/* Edit Mode Styles */
+li.editing input[type="text"] {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+li.editing button {
+  background-color: #ff9800;
+}
+
+li.editing button:hover {
+  background-color: #f57c00;
+}
+
+.padd{
+  padding-top: 25px;
+}
+
