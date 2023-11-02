@@ -64,7 +64,8 @@ function App() {
   });
 
   return (
-    <container>
+   
+      <div className='container'>
     <div align="center" className='padd'>
     <h2>Task Performing Data</h2>
       <input
@@ -73,7 +74,7 @@ function App() {
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}
       />
-      <button onClick={addTask}>Add Task</button>
+      <button className='btn' onClick={addTask}>Add Task</button>
       <select value={filter} onChange={(e) => setFilter(e.target.value)}>
         <option value="all">All</option>
         <option value="completed">Completed</option>
@@ -86,7 +87,8 @@ function App() {
         onTaskDelete={deleteTask}
       />
     </div>
-    </container>
+    </div>
+  
   );
 }
 

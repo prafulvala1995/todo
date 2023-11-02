@@ -6,6 +6,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -14,7 +15,9 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  width: 600px;
+  width: 800px;
+
+  
 }
 
 h1 {
@@ -97,7 +100,7 @@ li.editing button:hover {
   background-color: #f57c00;
 }
 
-.padd{
-  padding-top: 25px;
+.btn {
+  margin-right: 10px;
 }
 
